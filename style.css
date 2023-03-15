@@ -1,0 +1,275 @@
+* { box-sizing: border-box;}
+body{
+    font-family: verdana ;
+    background-color: black;
+}
+article h1{ font-size: 1.8em; }
+article h2{ font-size: 1.4em; }
+
+/* Section */
+section{
+    overflow: auto;
+}
+
+/* Header */
+header{
+    width: 30%;
+    height: 136px;
+    float: left;
+    border-bottom: 1px solid white;
+}
+header .logo {
+    width: 300px;
+    height: 100px;
+    margin-top: 20px;   
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+/* nav */
+nav{
+    width: 70%;
+    float: right;
+    border-bottom: 1px solid white;
+}
+nav ul{
+    list-style-type: none;
+    text-align: right;
+    margin-right: 20px; 
+}
+nav ul li{
+    display: inline-block;
+    line-height: 103px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    text-transform: uppercase;
+    padding: 20px 13px;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color: red;
+    transition: .5s;
+    border-bottom: 3px solid rgb(0, 159, 48); 
+}
+
+/* Main */
+main{
+    padding: 20px;
+    float: left;
+    width: 80%;
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+
+/* Aside */
+aside{
+    float: left;
+    width: 20%;
+    font-size: small;
+    color: white;
+    background-color: rgb(30, 30, 30);
+    text-align: justify;
+    padding: 20px;
+}
+aside a{
+    color: white;
+}
+aside a:hover{
+    color: red;
+    transition: .5s;
+}
+
+/* Footer */
+footer{
+    color: white;
+    font-size: smaller;
+    height: 150px;
+    padding: 50px;
+    border-top: 1px solid white;
+}
+#facebookFooter{
+    width: 80px;
+    height: 50px;
+}
+#contactNumbers, #email, #location{
+    width: 30%;
+    float: left;
+    height: 150px
+}
+#socialMedia{
+    width: 10%;
+    float: left;
+    height: 150px;
+}
+.contactDesc{
+    font-weight: bold;
+    color: rgb(0, 159, 48);
+    font-size: 1.3em;
+}
+#email a, #email:visited{
+    color: white;
+}
+#email a:hover{
+    color: red;
+    transition: .5s;
+}
+
+/* Main & Aside container */
+.main-aside-container{
+    float: left;
+    background-color: rgb(30, 30, 30);
+}
+
+/* Home */
+#mottoHome{
+    text-align: center;
+    margin-top: 15px;
+    display: block;
+    font-size: 1.5em;
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 80px
+}
+.slideshow-container{
+    max-width: 100%;
+    width: 100%;
+    border: 2px solid green;
+    position: relative;
+    margin: auto;
+}
+.mySlides{ /* Hide the images by default */
+    display: none;
+}
+.next{ /* Position the "next button" to the right */
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.mySlides img{
+    width: 100%;
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.text img{
+    width: 80px;
+    height: 50px;
+}
+
+/* For Emailing Form */
+.submit-btn{
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: underline;
+}
+.submit-btn:hover{
+    color: red;
+    transition: .5s;
+    border-bottom: 3px solid rgb(0, 159, 48); 
+    cursor: pointer;
+}
+  
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+/* About */
+#aboutArticle{
+    text-align: justify;
+    margin-top: 70px;
+}
+#aboutTitle{
+    color: red;
+}
+#aboutAbout{
+    color: rgb(0, 197, 0);
+}
+.event-services-container{
+    float: left;
+    width: 100%;
+}
+.event-container{
+    float: left;
+    width: 50%;
+}
+.services-container{
+    float: left;
+    width: 50%;
+}
+
+@media only screen and (max-width: 818px){
+    /* Footer adjustments */
+    #contactNumbers{
+        width: 50%;
+    }
+    #email{
+        width: 50%;
+    }
+    #location{
+        width: 50%;
+    }
+    #socialMedia{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1450px){
+    /* For tablets: */
+    header, nav{
+        width: 100%;
+    }
+    main{
+        width: 80%;
+    }
+    aside{
+        width: 20%;
+    }
+    nav ul{
+        text-align: center;
+    }
+    nav ul li{
+        line-height: 60px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    header, nav, main, aside {
+      width: 100%;
+    }
+    nav ul li{
+        display: block; 
+        width: 100%;
+        line-height: 40px;
+    }
+    nav ul li a{
+        padding: 10px 13px;
+    }
+    .event-container{
+        width: 100%;
+    }
+    .services-container{
+        width: 100%;
+    }
+}
+
